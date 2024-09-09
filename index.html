@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
-   <header class="flex flex-row justify-evenly items-center  bg-green-400 p-2">
+   <header class="sticky top-0 z-10 flex flex-row justify-evenly items-center  bg-green-400 p-2">
    <h1 class="text-3xl">  Welcome to our food site </h1>
    <section class="flex-row justify-evenly gap-4  ">  
     <input id="inputId" type="text" placeholder="Type here" class="input input-bordered   max-w-xs" />
@@ -100,8 +100,8 @@
     const showDetails=(meal)=>
     {
         const modal_container=document.getElementById("modal_container");
-        modal_container.innerHTML=`<img src="${meal.strMealThumb}" class="w-48 h-32" alt="test"> <p> ${meal.strMeal}</p>
-        <p> ${meal.strInstructions} </p>
+        modal_container.innerHTML=`<img src="${meal.strMealThumb}" class="sticky z-10 top-0 w-48 h-32" alt="test"> <p> ${meal.strMeal}</p>
+        <p  > ${meal.strInstructions} </p>
         `;
         show_meals_details.showModal();
     }
